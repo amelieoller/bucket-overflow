@@ -1,0 +1,11 @@
+<div class="goal">
+	<h3>{{@goal.title}}</h3>
+	{{#if @showBody}}
+	<span>{{@goal.formattedPublishedAt}}</span>
+	<p>{{@goal.body}}</p>
+	{{/if}}
+
+	<button {{on "click" (fn this.removeGoal @goal)}}>
+		Remove Goal
+	</button>
+</div>

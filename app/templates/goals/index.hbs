@@ -1,0 +1,11 @@
+{{outlet}}
+
+New Goal: <Input @value={{this.newTitle}} @enter={{fn this.addGoal}} />
+
+<div class="goals">
+	{{#each @model as |goal|}}
+	<LinkTo @route="goals.goal" @model={{goal.id}}>
+		<GoalView @goal={{goal}} />
+	</LinkTo>
+	{{/each}}
+</div>
